@@ -138,15 +138,15 @@ function TitleDescDisconRating({ textProduct }) {
           : textProduct.description.toLowerCase()}
       </p>
       <span
-        className={`bg-[#ff7c2beb] text-[12px] p-1 rounded text-white ${merriweather700.className}`}
+        className={`bg-black/20 text-[12px] p-1 rounded text-black/90 ${merriweather700.className}`}
       >
         diskon: {textProduct.discountPercentage}%
       </span>
-      <div className="rating h-6 px-[1px] rounded flex justify-center items-center w-11 font-bold rating-sm mt-2 text-[10px] bg-[#ff6c102b] border ">
+      <div className="rating h-6 px-[1px] rounded flex justify-center items-center w-11 font-bold rating-sm mt-2 text-[10px] bg-black/10 border ">
         <input
           type="radio"
           name="rating-5"
-          className="mask mask-star-2 bg-orange-600 block scale-75"
+          className="mask mask-star-2 bg-[orange]  block scale-75"
         />{" "}
         {textProduct.rating}
       </div>

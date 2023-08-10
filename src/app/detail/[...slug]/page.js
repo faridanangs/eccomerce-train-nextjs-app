@@ -58,7 +58,7 @@ export default function DetailProduct({ params }) {
       <section className="p-1 md:flex md:gap-4 md:p-4 md:items-start">
         {/* Image content */}
         {product ? (
-          <div className="">
+          <div className="overflow-x-hidden">
             <Image
               src={currentImage ? currentImage : product.thumbnail}
               alt={product.title}
@@ -68,7 +68,7 @@ export default function DetailProduct({ params }) {
               height={200}
               className="object-contain w-full bg-white max-h-[200px] min-h-[200px]"
             />
-            <div className="flex justify-center overflow-x-scroll gap-2 mt-4">
+            <div className="flex justify-start w-full px-4 overflow-x-scroll gap-2 mt-4">
               {product.images ? (
                 product.images.map((img, i) => (
                   <div
@@ -101,7 +101,7 @@ export default function DetailProduct({ params }) {
         )}
         {/* Text content */}
         {product && (
-          <div className="mt-6 md:mt-0">
+          <div className="mt-6 md:mt-0 px-4 pb-6">
             <h1 className={`${merriweather700.className} text-sm`}>
               {product.brand} / {product.category}
             </h1>
@@ -118,7 +118,7 @@ export default function DetailProduct({ params }) {
             </div>
             <div className="flex flex-col">
               <span
-                className={`bg-[#ff7c2beb] inline-flex justify-center items-center w-28 text-[12px] my-2 p-1 rounded text-white ${merriweather700.className}`}
+                className={`bg-black/10 inline-flex justify-center items-center w-28 text-[13px] my-2 p-1 rounded ${merriweather700.className}`}
               >
                 diskon: {product.discountPercentage}%
               </span>
@@ -136,7 +136,7 @@ export default function DetailProduct({ params }) {
                   setNotif(true)
                   setTimeout(()=> setNotif(false) , 2000)
                   dispatch(addToCart(product))}}
-                className="flex btn rounded btn-success"
+                className="flex btn rounded btn-neutral"
               >
                 Add To Cart <BiCartAdd className="text-3xl" />
               </button>

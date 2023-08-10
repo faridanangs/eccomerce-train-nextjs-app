@@ -64,12 +64,10 @@ export default function Cart() {
       {cart.length !== 0 && cart !== undefined ? (
         <section>
           {/* Admin Name */}
-          <div className="flex flex-col gap-2 justify-center h-full">
+          <div className="flex flex-col gap-2 bg-white justify-center h-full pb-20">
             {cart.map((val, i) => {
               return (
-                <div key={i} className="flex flex-col justify-center gap-2 bg-white">
-                  <div>{val.count < 1 ? alert("apus? ") : ""}</div>
-
+                <div key={i} className="flex border-b-2 flex-col justify-center gap-2 bg-white">
                   {/* Product content */}
                   <div className="flex gap-4 p-2">
                     <div>
@@ -185,7 +183,7 @@ function CekOut({
   );
 
   return (
-    <div className="flex items-center px-2 bg-white py-3 justify-between">
+    <div className="flex items-center mt-2 font-bold fixed border-t-2 border-[#5d5c5c91] px-2 right-0 left-0 bottom-0 z-[100] py-5 bg-white justify-between">
       <div className="flex">
         <label className="cursor-pointer label p-0 items-center gap-2">
           <input
@@ -203,7 +201,7 @@ function CekOut({
             ? totalHarga.toFixed(2)
             : hargaPilihan.toFixed(2)}
         </h1>
-        <button className="btn btn-error btn-sm rounded-sm">Checkout</button>
+        <button className="btn btn-neutral btn-sm rounded-sm">Checkout</button>
       </div>
     </div>
   );
