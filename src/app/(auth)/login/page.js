@@ -3,27 +3,37 @@ import { BiUser, BiLockAlt } from "react-icons/bi";
 import { FcGoogle } from "react-icons/fc";
 import { AiFillFacebook } from "react-icons/ai";
 import Link from "next/link";
+import Image from "next/image";
+import loginImage from '/public/images/contact.png'
 
 const MerriweatherSans = Merriweather_Sans({
   weight: ["500"],
   display: "swap",
   subsets: ["latin"],
+  
 });
 
 export default function Login() {
   return (
-    <section>
-      <div>
+    <section className="h-screen w-full flex items-center justify-center">
+      <div className="flex items-center justify-center px-4">
         {/* Image content */}
-        <div></div>
+        <div className=" flex-1 hidden md:block lg:max-w-[35rem]">
+          <Image
+            src={loginImage}
+            alt="Login Image"
+            className="object-contain"
+
+          />
+        </div>
 
         {/* Text content */}
-        <div className="h-[100vh] py-6 w-full flex flex-col px-6">
+        <div className="py-6 w-full flex flex-col px-6 md:flex-1 lg:max-w-[27rem]">
 
             {/* Icon Logo */}
           <div className="flex flex-col items-center justify-center mb-10">
-            <BiUser className="text-[60px]" />
-            <h1 className="text-xl font-bold -mt-2">Log In</h1>
+            <BiUser className="text-[60px] md:text-[80px]" />
+            <h1 className="text-xl font-bold -mt-2 md:text-3xl">Log In</h1>
           </div>
 
           {/* Form Text */}

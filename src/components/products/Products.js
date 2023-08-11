@@ -49,10 +49,10 @@ export default function Products() {
   // Untuk mengecek apakah nilai notif true untuk di ubah menjadi fals
 
   return (
-    <main className="bg-white/70 mt-10  p-1 relative w-full">
-      <h1 className="my-2 font-bold text-xl">REKOMENDASI</h1>
+    <main className="bg-white/70 mt-10  p-1 lg:px-8 relative w-full">
+      <h1 className="my-2 font-bold text-xl md:text-2xl">REKOMENDASI</h1>
       {products ? (
-        <section className="grid grid-cols-2 gap-2 md:grid-cols-3 w-full">
+        <section className="grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 w-full">
           {products.map((product) => (
             <div
               className="cursor-pointer col-auto flex justify-center flex-col bg-white/90 px-2 hover:scale-[1.02] transition-all duration-300"
@@ -66,7 +66,7 @@ export default function Products() {
                 width={200}
                 height={200}
                 quality={100}
-                className="object-contain mb-2 max-h-[90px] mt-2 min-h-[90px] hover:scale-[.97] transition-all duration-200"
+                className="object-contain mb-2 max-h-[90px] md:max-h-[120px] mt-2 min-h-[90px] md:min-h-[120px] hover:scale-[.97] transition-all duration-200"
               />
               {/* Text content */}
 
@@ -75,7 +75,9 @@ export default function Products() {
 
               {/* price and addCart */}
               <div className="flex items-center justify-between mt-6 mb-2">
-                <h1 className="text-[red]">${product.price.toFixed(2)}</h1>
+                <h1 className="text-[red] md:text-xl">
+                  ${product.price.toFixed(2)}
+                </h1>
                 <button
                   onClick={() => {
                     setNotif(true);
@@ -84,7 +86,7 @@ export default function Products() {
                   }}
                   className="flex hover:scale-105 transition-all hover:shadow-lg duration-200 items-center justify-center gap-1 px-2 rounded py-[1px] font-bold"
                 >
-                  <BiCartAdd className="text-2xl" />
+                  <BiCartAdd className="text-2xl md:text-4xl" />
                 </button>
               </div>
             </div>
@@ -96,13 +98,15 @@ export default function Products() {
       {notif && (
         <div
           className={`${MerriweatherSans4Def.className} text-center fixed 
-         min-w-[320px] max-w-[320px] mx-auto  text-white bg-black/80 z-[600] 
-        top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-4 rounded-lg flex justify-center items-center flex-col`}
+         min-w-[320px] max-w-[320px] md:min-w-[520px] md:max-w-[520px] mx-auto  text-white bg-black/80 z-[600] 
+        top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-4 md:p-8 rounded-md flex justify-center items-center flex-col`}
         >
           <span className="inline-block p-2 rounded-full my-2  bg-green-400/70">
-            <BiCheck className="text-3xl " />
+            <BiCheck className="text-3xl md:text-5xl" />
           </span>
-          Product telah di masukan ke dalam kranjang
+          <p className="md:text-xl">
+            Product telah di masukan ke dalam kranjang
+          </p>
         </div>
       )}
     </main>
@@ -114,33 +118,37 @@ function TitleDescDisconRating({ textProduct }) {
   return (
     <Link
       rel="preloaded"
-      href={`/detail/${textProduct.title}/${textProduct.description}/${textProduct.id}`}
+      href={`/detail/${encodeURIComponent(
+        textProduct.title.replace(/\s+/g, "_").toUpperCase()
+      )}/${encodeURIComponent(
+        textProduct.description.replace(/\s+/g, "_").toUpperCase()
+      )}/${textProduct.id}`}
     >
-      <h1 className="font-bold link link-neutral">
+      <h1 className="font-bold link link-neutral md:text-xl">
         {" "}
         {textProduct.title.length > 15
           ? textProduct.title.slice(0, 15) + "..."
           : textProduct.title}
       </h1>
       <p
-        className={`${merriweather400.className} link link-neutral text-[13px]`}
+        className={`${merriweather400.className} link link-neutral text-[13px] md:text-[20px]`}
       >
         {textProduct.description.length > 30
           ? textProduct.description.slice(0, 30).toLowerCase() + "..."
           : textProduct.description.toLowerCase()}
       </p>
       <span
-        className={`bg-black/20 text-[12px] p-1 rounded text-black/90 ${merriweather700.className}`}
+        className={`bg-black/20 text-[12px] p-1 inline-block md:text-[15px] md:my-2 rounded text-black/90 ${merriweather700.className}`}
       >
         diskon: {textProduct.discountPercentage}%
       </span>
-      <div className="rating h-6 px-[1px] rounded flex justify-center items-center w-11 font-bold rating-sm mt-2 text-[10px] bg-black/10 border ">
+      <div className="rating h-6 md:h-8 px-[1px] md:gap-1 rounded flex justify-center items-center md:px-2 w-11 md:w-20 font-bold rating-sm mt-2 text-[10px] bg-black/10 border ">
         <input
           type="radio"
           name="rating-5"
-          className="mask mask-star-2 bg-[orange]  block scale-75"
+          className="mask mask-star-2 bg-[orange]  block scale-75 md:scale-105"
         />{" "}
-        {textProduct.rating}
+        <p className="md:text-lg">{textProduct.rating}</p>
       </div>
     </Link>
   );
