@@ -128,7 +128,7 @@ export default function NavbarTop() {
 
       {/* hasil pencarian */}
       {dataFilter.length > 0 && (
-        <div className="absolute top-16 lg:px-8 mx-auto right-0 left-0 flex flex-col gap-1 p-2 px-4 h-[40vh] overflow-y-auto bg-black/60 text-black z-[20] ">
+        <div className="absolute top-16 lg:px-8 mx-auto right-0 left-0 flex flex-col gap-1 p-2 px-4 h-[40vh] md:h-[50vh] overflow-y-auto bg-black/60 text-black z-[20] ">
           {dataFilter.length > 0
             ? dataFilter.map((val) => (
                 <Link
@@ -146,9 +146,9 @@ export default function NavbarTop() {
                       alt={val.title}
                       priority
                       quality={100}
-                      className="max-h-[40px] min-h-[40px] object-contain bg-black/60"
+                      className="max-h-[40px] min-h-[40px] md:max-h-[60px] md:max-w-[60px] md:min-w-[60px] md:min-h-[60px] object-contain bg-black/60"
                     />
-                    <div className="link">
+                    <div className={`link md:text-xl ${MerriweatherSans}`}>
                       <h1>
                         {val.title.length > 10
                           ? val.title.slice(0, 15).toUpperCase() + "..."
