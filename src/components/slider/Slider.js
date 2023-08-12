@@ -1,7 +1,19 @@
 "use client";
+// import Swiper core and required modules
+import {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  Autoplay,
+} from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 import Image from "next/image";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
 import slider1 from "public/images/main-banner-1.jpg";
 import slider2 from "public/images/main-banner.jpg";
 
@@ -9,22 +21,31 @@ import slider2 from "public/images/main-banner.jpg";
 export default function Banner() {
   return (
     <div className="relative">
-      <Carousel autoPlay={true} infiniteLoop={true} showStatus={false} showIndicators={true} 
-      showThumbs={false} interval={4000} showArrows={false}
+      <Swiper
+        // install Swiper modules
+        modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+       
+        slidesPerView={1}
+        pagination={{
+          dynamicBullets: true,
+        }}
+        autoplay={{ delay: 3500 }}
+        loop={true}
+        className="relative w-full h-[30vh] md:h-[35vh] md:w-[100vw] lg:h-[70vh]"
       >
-        <div>
-          <Image priority quality={100} src={slider1} alt="Slider 1" />
-        </div>
-        <div>
-          <Image priority quality={100} src={slider2} alt="Slider 2" />
-        </div>
-        <div>
-          <Image priority quality={100} src={slider1} alt="Slider 1" />
-        </div>
-        <div>
-          <Image priority quality={100} src={slider2} alt="Slider 2" />
-        </div>
-      </Carousel>
+        <SwiperSlide>
+          <Image src={slider1} alt="slider img" fill quality={100} className="object-cover" priority />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image src={slider2} alt="slider img" fill quality={100} className="object-cover" priority />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image src={slider1} alt="slider img" fill quality={100} className="object-cover" priority />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image src={slider2} alt="slider img" fill quality={100} className="object-cover" priority />
+        </SwiperSlide>
+      </Swiper>
     </div>
   );
 }

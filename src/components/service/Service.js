@@ -15,15 +15,15 @@ const MerriweatherSans = Merriweather_Sans({
 export default function Service() {
   return (
     <section className="flex justify-center px-4 bg-slate-400 pt-10 pb-14 rounded-b-3xl">
-      <div className="grid grid-cols-5 w-full">
+      <div className="grid grid-cols-5 w-full md:px-2">
         <div className="mb-3 flex flex-col items-center text-center">
           <Image
             src={service_1}
             alt="service 1"
-            className="w-[40px] h-[40px] bg-white px-2 py-1 rounded-md object-contain"
+            className="w-[40px] h-[40px] md:w-[50px] md:h-[50px] bg-white px-2 py-1 rounded-md object-contain"
           />
           <h1
-            className={`text-white text-[12px] my-2 ${MerriweatherSans.className}`}
+            className={`text-white text-[12px] md:text-[16px] my-2 ${MerriweatherSans.className}`}
           >
             Service
           </h1>
@@ -32,10 +32,10 @@ export default function Service() {
           <Image
             src={service_2}
             alt="service 1"
-            className="w-[40px] h-[40px] bg-white px-2 py-1 rounded-md object-contain"
+            className="w-[40px] h-[40px] md:w-[50px] md:h-[50px]  bg-white px-2 py-1 rounded-md object-contain"
           />
           <h1
-            className={`text-white text-[12px] my-2 ${MerriweatherSans.className}`}
+            className={`text-white text-[12px] md:text-[16px] my-2 ${MerriweatherSans.className}`}
           >
             Service
           </h1>
@@ -44,10 +44,10 @@ export default function Service() {
           <Image
             src={service_3}
             alt="service 1"
-            className="w-[40px] h-[40px] bg-white px-2 py-1 rounded-md object-contain"
+            className="w-[40px] h-[40px] md:w-[50px] md:h-[50px]  bg-white px-2 py-1 rounded-md object-contain"
           />
           <h1
-            className={`text-white text-[12px] my-2 ${MerriweatherSans.className}`}
+            className={`text-white text-[12px] md:text-[16px] my-2 ${MerriweatherSans.className}`}
           >
             Service
           </h1>
@@ -56,10 +56,10 @@ export default function Service() {
           <Image
             src={service_4}
             alt="service 1"
-            className="w-[40px] h-[40px] bg-white px-2 py-1 rounded-md object-contain"
+            className="w-[40px] h-[40px] md:w-[50px] md:h-[50px]  bg-white px-2 py-1 rounded-md object-contain"
           />
           <h1
-            className={`text-white text-[12px] my-2 ${MerriweatherSans.className}`}
+            className={`text-white text-[12px] md:text-[16px] my-2 ${MerriweatherSans.className}`}
           >
             Service
           </h1>
@@ -68,10 +68,10 @@ export default function Service() {
           <Image
             src={service_5}
             alt="service 1"
-            className="w-[40px] h-[40px] bg-white px-2 py-1 rounded-md object-contain"
+            className="w-[40px] h-[40px] md:w-[50px] md:h-[50px]  bg-white px-2 py-1 rounded-md object-contain"
           />
           <h1
-            className={`text-white text-[12px] my-2 ${MerriweatherSans.className}`}
+            className={`text-white text-[12px] md:text-[16px] my-2 ${MerriweatherSans.className}`}
           >
             Service
           </h1>
@@ -80,10 +80,10 @@ export default function Service() {
           <Image
             src={service_1}
             alt="service 1"
-            className="w-[40px] h-[40px] bg-white px-2 py-1 rounded-md object-contain"
+            className="w-[40px] h-[40px] md:w-[50px] md:h-[50px]  bg-white px-2 py-1 rounded-md object-contain"
           />
           <h1
-            className={`text-white text-[12px] my-2 ${MerriweatherSans.className}`}
+            className={`text-white text-[12px] md:text-[16px] my-2 ${MerriweatherSans.className}`}
           >
             Service
           </h1>
@@ -92,10 +92,10 @@ export default function Service() {
           <Image
             src={service_2}
             alt="service 1"
-            className="w-[40px] h-[40px] bg-white px-2 py-1 rounded-md object-contain"
+            className="w-[40px] h-[40px] md:w-[50px] md:h-[50px]  bg-white px-2 py-1 rounded-md object-contain"
           />
           <h1
-            className={`text-white text-[12px] my-2 ${MerriweatherSans.className}`}
+            className={`text-white text-[12px] md:text-[16px] my-2 ${MerriweatherSans.className}`}
           >
             Service
           </h1>
@@ -104,10 +104,10 @@ export default function Service() {
           <Image
             src={service_3}
             alt="service 1"
-            className="w-[40px] h-[40px] bg-white px-2 py-1 rounded-md object-contain"
+            className="w-[40px] h-[40px] md:w-[50px] md:h-[50px]  bg-white px-2 py-1 rounded-md object-contain"
           />
           <h1
-            className={`text-white text-[12px] my-2 ${MerriweatherSans.className}`}
+            className={`text-white text-[12px] md:text-[16px] my-2 ${MerriweatherSans.className}`}
           >
             Service
           </h1>
@@ -116,10 +116,10 @@ export default function Service() {
           <Image
             src={service_4}
             alt="service 1"
-            className="w-[40px] h-[40px] bg-white px-2 py-1 rounded-md object-contain"
+            className="w-[40px] h-[40px] md:w-[50px] md:h-[50px]  bg-white px-2 py-1 rounded-md object-contain"
           />
           <h1
-            className={`text-white text-[12px] my-2 ${MerriweatherSans.className}`}
+            className={`text-white text-[12px] md:text-[16px] my-2 ${MerriweatherSans.className}`}
           >
             Service
           </h1>
@@ -128,10 +128,10 @@ export default function Service() {
           <Image
             src={service_5}
             alt="service 1"
-            className="w-[40px] h-[40px] bg-white px-2 py-1 rounded-md object-contain"
+            className="w-[40px] h-[40px] md:w-[50px] md:h-[50px]  bg-white px-2 py-1 rounded-md object-contain"
           />
           <h1
-            className={`text-white text-[12px] my-2 ${MerriweatherSans.className}`}
+            className={`text-white text-[12px] md:text-[16px] my-2 ${MerriweatherSans.className}`}
           >
             Service
           </h1>

@@ -50,7 +50,7 @@ export default function NavbarBottom() {
         </label>
         <ul
           tabIndex={0}
-          className="dropdown-content z-[1] hover:cursor-pointer mt-4 menu p-1 shadow bg-base-100 rounded-md w-52"
+          className="dropdown-content z-[100] hover:cursor-pointer mt-4 menu p-1 shadow bg-base-100 rounded-md w-52"
         >
           {Category.map((val) => (
             <li key={val.id}>
@@ -62,7 +62,7 @@ export default function NavbarBottom() {
         </ul>
       </div>{" "}
       <div
-        className={`flex gap-1 gap-3 text-white ${MerriweatherSans.className}`}
+        className={`flex gap-3 text-white ${MerriweatherSans.className}`}
       >
         <div className="flex items-center cursor-pointer gap-0 md:gap-1">
           <button className="btn btn-ghost btn-circle">
