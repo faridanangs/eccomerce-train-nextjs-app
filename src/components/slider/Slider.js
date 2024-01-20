@@ -33,6 +33,19 @@ export default function Banner() {
         loop={true}
         className="relative w-full h-[30vh] md:h-[35vh] md:w-[100vw] lg:h-[70vh] h-full"
       >
+          
+        <SwiperSlide>
+          <Image src={slider1} alt="slider img" fill quality={100} className="object-cover" priority />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image src={slider2} alt="slider img" fill quality={100} className="object-cover" priority />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image src={slider1} alt="slider img" fill quality={100} className="object-cover" priority />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image src={slider2} alt="slider img" fill quality={100} className="object-cover" priority />
+        </SwiperSlide>
       </Swiper>
     </div>
   );
