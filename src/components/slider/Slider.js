@@ -31,7 +31,7 @@ export default function Banner() {
         }}
         autoplay={{ delay: 3500 }}
         loop={true}
-        className="relative w-full h-[30vh] md:h-[35vh] md:w-[100vw] lg:h-[70vh]"
+        className="relative w-full h-[30vh] md:h-[35vh] md:w-[100vw] lg:h-[70vh] h-full"
       >
         <SwiperSlide>
           <Image src={slider1} alt="slider img" fill quality={100} className="object-cover" priority />
